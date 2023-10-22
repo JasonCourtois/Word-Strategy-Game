@@ -15398,13 +15398,8 @@ class game:
                 print("     ", end="")
             elif i == 25:
                 print(f"[{pboard[i]}]")
+            print(f"[{pboard[i]}]", end="")
 
-            if i < 10:  # prints first row
-                print(f"[{pboard[i]}]", end="")
-            elif i < 19:  # prints second row
-                print(f"[{pboard[i]}]", end="")
-            elif i < 25:  # print third row
-                print(f"[{pboard[i]}]", end="")
 
     def checkWinner(self):
         if str(self.colors) == "[2, 2, 2, 2, 2]":  # colors all green when guess == cword
