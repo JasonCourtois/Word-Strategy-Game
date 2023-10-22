@@ -2,17 +2,17 @@ import re
 import random
 from os import system, name
 
+# list of all possible answers for the game
 with open('Answers.txt', 'r') as f:
-    word_lista = list(f)
-# list of all possible answers ^^^
+    answers = list(f)
 
+# list of all possible guesses and answers that make up valid inputs
 with open('AnswersAndGuesses.txt', 'r') as f:
-    word_listag = list(f)
-# list of all possible guesses and answers ^^^
+    valid_inputs = list(f)
 
 pboard = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H',
           'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
-# pboard ^^ this list is the one that is edited and then printed
+
 kboard = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 # kboard ^^ stays STATIC as a means to search the keyboard and find the index value to edit pboard
 kcolors = {'Q': '0', 'W': '0', 'E': '0', 'R': '0', 'T': '0', 'Y': '0', 'U': '0', 'I': '0', 'O': '0',
@@ -49,7 +49,7 @@ class game:
         self.boxes = [["□", "□", "□", "□", "□"], ["□", "□", "□", "□", "□"], ["□", "□", "□", "□", "□"],
                       ["□", "□", "□", "□", "□"], ["□", "□", "□", "□", "□"], ["□", "□", "□", "□", "□"]]
         self.crow = 0  # stands for current-row
-        self.cword = str(word_lista[random.randint(0, len(word_lista) - 1)]).upper()  # current-word
+        self.cword = str(answers[random.randint(0, len(answers) - 1)]).upper()  # current-word
         self.colors = [0, 0, 0, 0, 0]  # 0 = white 1 = yellow 2 = green
 
     def row(self, num):
@@ -125,7 +125,6 @@ class game:
             return True
 
 
-clear()
 again = True
 while again:
     board = game()
@@ -134,7 +133,7 @@ while again:
         board.printBoard()
         board.letterBank()
         guess = input("Guess a word: ").upper()
-        while not re.match("^[A-Z]{5}$", guess) or not re.search(guess, str(word_listag).upper()):
+        while not re.match("^[A-Z]{5}$", guess) or not re.search(guess, str(valid_inputs).upper()):
             guess = input("Please enter a valid word: ").upper()
         board.checkInput(guess)
         for l in range(len(guess)):
