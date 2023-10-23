@@ -2,13 +2,16 @@ import random
 from os import system, name
 
 # list of all possible answers for the game
+answers = []
 with open('Answers.txt', 'r') as f:
-    f.readlines()
-    answers = list(f)
+    for line in f.readlines():
+        answers.append(line.strip())
 
 # list of all possible guesses and answers that make up valid inputs
+valid_inputs = []
 with open('AnswersAndGuesses.txt', 'r') as f:
-    valid_inputs = list(f)
+    for line in f.readlines():
+        valid_inputs.append(line.strip())
 
 
 # Clears the console log based off of the operating system
@@ -35,6 +38,17 @@ def colored(r, g, b, text):
 
 
 # Game class handles the current board info, input checking, and printing the board to the console.
+def color_text(text, value):
+    if value == 0:
+        return colored(255, 255, 255, text)
+    elif value == 1:
+        return colored(100, 100, 100, text)
+    elif value == 2:
+        return colored(255, 255, 0, text)
+    elif value == 3:
+        return colored(0, 255, 0, text)
+
+
 class game:
 
     def __init__(self):
@@ -46,7 +60,6 @@ class game:
         self.answer = str(answers[random.randint(0, len(answers) - 1)]).upper().strip()
         # Create a dictionary that stores the color value of each letter
         self.keyboard_colors = reset_keyboard_colors()
-
 
     def reset_letter_frequency(self):
         letter_frequency = {}  # Stores each letter used in the answer as a key, and its frequency as the value
@@ -74,7 +87,7 @@ class game:
             elif i == 19:
                 print("")
                 print("     ", end="")
-            print(f"[{self.color_text(key, self.keyboard_colors[key])}]", end="")
+            print(f"[{color_text(key, self.keyboard_colors[key])}]", end="")
             i += 1
         print("")
 
@@ -83,16 +96,6 @@ class game:
         testarooney = reset_keyboard_colors()
         for key in testarooney.keys():
             print(f"{key} = {testarooney[key]}")
-
-    def color_text(self, text, value):
-        if value == 0:
-            return colored(255, 255, 255, text)
-        elif value == 1:
-            return colored(100, 100, 100, text)
-        elif value == 2:
-            return colored(255, 255, 0, text)
-        elif value == 3:
-            return colored(0, 255, 0, text)
 
     def check_input(self, guess):
         guess = guess.upper().strip()
@@ -111,11 +114,11 @@ class game:
                 if self.keyboard_colors[l] != 3:
                     self.keyboard_colors[l] = 2
                 letter_frequency[l] -= 1
-            elif guess_colors[i] != 3:
+            elif self.keyboard_colors[guess[i]] == 0:
                 self.keyboard_colors[guess[i]] = 1
 
         for i, l in enumerate(guess):
-            self.board[self.current_row][i] = self.color_text(l, guess_colors[i])
+            self.board[self.current_row][i] = color_text(l, guess_colors[i])
         self.current_row += 1
 
 
