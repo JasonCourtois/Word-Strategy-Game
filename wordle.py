@@ -103,7 +103,6 @@ class Game:
     Returns 0 if word wasn't guessed and there are guesses remaining.
     '''
     def check_input(self, guess):
-        guess = guess.upper().strip()                     # Capitalize the guess and strip it of newline characters for consistency.
         letter_frequency = self.reset_letter_frequency()  # Reset the frequency of each letter to check this guess.
         guess_colors = [1, 1, 1, 1, 1]                    # Set all characters incorrect to start.
 
@@ -145,12 +144,15 @@ def main():
     board.print_board()
     win_condition = 0
     while win_condition == 0:
-        win_condition = board.check_input(input("Input Word"))
+        guess = input("Input Guess: ").strip().upper()
+        while guess not in valid_inputs:
+            guess = input("Input Guess: ").strip().upper()
+        win_condition = board.check_input(guess)
         board.print_board()
     if win_condition == 2:
         print("--Congrats you won!--")
     elif win_condition == 1:
-        print(f"--Nice try, the word was {board.answer}!")
+        print(f"--Nice try, the word was {board.answer}!--")
 
 
 if __name__ == "__main__":

@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f492fbab-0f29-48bc-b7cd-5bfe94c75d13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GUIWordle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Word-Strategy-Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Word-Strategy-Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnswersAndGuesses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AnswersAndGuesses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OLD Wordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD Wordle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratchwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratchwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUIWordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIWordle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
