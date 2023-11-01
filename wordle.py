@@ -102,7 +102,7 @@ class Game:
     Returns 1 if all guesses were used.
     Returns 0 if word wasn't guessed and there are guesses remaining.
     '''
-    def check_input(self, guess):
+    def check_input(self, guess, addColor):
         letter_frequency = self.reset_letter_frequency()  # Reset the frequency of each letter to check this guess.
         guess_colors = [1, 1, 1, 1, 1]                    # Set all characters incorrect to start.
 
@@ -124,8 +124,12 @@ class Game:
                 self.keyboard_colors[letter] = 1
 
         # Lastly loop through the guess one final time in order to update the on-screen board.
-        for i, letter in enumerate(guess):
-            self.board[self.current_row][i] = color_text(letter, guess_colors[i])
+        if addColor:
+            for i, letter in enumerate(guess):
+                self.board[self.current_row][i] = color_text(letter, guess_colors[i])
+        else:
+            for i, letter in enumerate(guess):
+                self.board[self.current_row][i] = [letter, guess_colors[i]]
 
         victory = all(letter == 3 for letter in guess_colors)  # Game is won if all guess colors are green.
         self.current_row += 1  # Increment to next row
@@ -147,7 +151,7 @@ def main():
         guess = input("Input Guess: ").strip().upper()
         while guess not in valid_inputs:
             guess = input("Input Guess: ").strip().upper()
-        win_condition = board.check_input(guess)
+        win_condition = board.check_input(guess, True)
         board.print_board()
     if win_condition == 2:
         print("--Congrats you won!--")

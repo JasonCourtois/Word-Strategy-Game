@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f492fbab-0f29-48bc-b7cd-5bfe94c75d13" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Word-Strategy-Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Word-Strategy-Game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnswersAndGuesses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AnswersAndGuesses.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUIWordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUIWordle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLD Wordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD Wordle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratchwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratchwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +45,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/jcour/Wrork Github/Word-Strategy-Game&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
